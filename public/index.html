@@ -32,38 +32,38 @@
 
         <section class="search--input-container">
             <img src="../src/img/icons/buscar.png" alt="Search Icon">
-            <input placeholder="Search Github username...">
-            <button>Search</button>
+            <input id="input-user" placeholder="Search Github username...">
+            <button id="search-user">Search</button>
         </section>
 
         <section class="information-container">
             <section class="information-container--user">
-                <div class="information-container--user-image">
+                <div id="img-user" class="information-container--user-image">
                     
                 </div>
                 <div class="information-container--user-info">
-                    <h1>The Octocat</h1>
-                    <h3>@octocat</h3>
-                    <h4>Joined 25 Jan 2011</h4>
+                    <h1 id="name">The Octocat</h1>
+                    <h3 id="user">@octocat</h3>
+                    <h4 id="date">Joined 25 Jan 2011</h4>
                 </div>
             </section>
             
             <section class="information-container--bio">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum doloribus excepturi ex itaque veritatis ducimus ut, aliquam accusamus aspernatur delenit</p>
+                <p id="bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum doloribus excepturi ex itaque veritatis ducimus ut, aliquam accusamus aspernatur delenit</p>
             </section>
 
             <section class="information-container--repo-follow">
                 <div>
                     <h4>Repos</h4>
-                    <h4>8</h4>
+                    <h4 id="repos">8</h4>
                 </div>
                 <div>
                     <h4>Followers</h4>
-                    <h4>1000</h4>
+                    <h4 id="followers">1000</h4>
                 </div>
                 <div>
                     <h4>Following</h4>
-                    <h4>9</h4>
+                    <h4 id="following">9</h4>
                 </div>
             </section>
 
@@ -89,5 +89,6 @@
         </section>
     </section>
     
+    <script src="../src/index.js"></script>
 </body>
 </html>
