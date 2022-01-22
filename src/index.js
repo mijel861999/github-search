@@ -10,6 +10,10 @@ const bioContainer = document.getElementById('bio');
 const reposContainer = document.getElementById('repos');
 const followersContainer = document.getElementById('followers');
 const followingContainer = document.getElementById('following');
+const placeContainer = document.getElementById('place');
+const personalPageContainer = document.getElementById('personal-page');
+const twitterContainer = document.getElementById('twitter');
+const companyContainer = document.getElementById('company');
 
 buttonUser.addEventListener('click', async () => {
     console.log(inputUser.value)
@@ -29,6 +33,11 @@ buttonUser.addEventListener('click', async () => {
         }else {
             bioContainer.innerText = user.bio;
         }
+
+        placeContainer.innerText = user.location;
+        personalPageContainer.innerText = user.html_url;
+        twitterContainer.innerText = user.twitter_username;
+        companyContainer.innerText = user.company;
         
     } catch( e ){
         alert('Este usuario no existe')
