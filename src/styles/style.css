@@ -219,9 +219,10 @@ header .header--light-container button span {
 }
 
 .information-container--socials .social-container div {
+    width: 50%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 

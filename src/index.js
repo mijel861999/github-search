@@ -16,10 +16,11 @@ const twitterContainer = document.getElementById('twitter');
 const companyContainer = document.getElementById('company');
 
 buttonUser.addEventListener('click', async () => {
-    console.log(inputUser.value)
-    try {
-        const user = await getData(inputUser.value);
         
+    const user = await getData(inputUser.value);
+    if( user.login == null) {
+        alert('Este usuario no existe')
+    }else {
         nameContainer.innerText = user.twitter_username;
         userContainer.innerText = '@' + user.login;
         dateContainer.innerText = user.created_at;
@@ -36,12 +37,11 @@ buttonUser.addEventListener('click', async () => {
 
         placeContainer.innerText = user.location;
         personalPageContainer.innerText = user.html_url;
+        personalPageContainer.href = `https://github.com/${user.login}`;
         twitterContainer.innerText = user.twitter_username;
+        twitterContainer.href=`https://twitter.com/${user.twitter_username}`;
         companyContainer.innerText = user.company;
-        
-    } catch( e ){
-        alert('Este usuario no existe')
-    }
+    } 
 
 })
 
@@ -49,8 +49,13 @@ buttonUser.addEventListener('click', async () => {
 const getData = async ( user ) => {
     const apiURL = 'https://api.github.com/users/'
 
-    const response = await fetch(apiURL+ user);
-    const data = await response.json();
+    try {
+        const response = await fetch(apiURL+ user);
+        const data = await response.json();
 
-    return data
+        return data
+
+    } catch(e) {
+        console.log(e)
+    }
 }
