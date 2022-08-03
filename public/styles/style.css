@@ -1,0 +1,248 @@
+/*
+    1 - Posicionamiento
+    2 - Modelo Caja (margin, padding, width, heigth)
+    3 - Tipografía
+    4 - Visuales
+    5 - Otros
+*/
+
+:root {
+    /* Colores */
+    --blue-dark: #141c2f;
+    --blue: #1f2a48;
+    --sky-blue: #0079fe;
+    --white: #f8fafb;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-size: 62.5%;
+    font-family: 'Dongle';
+    background-color: var(--blue-dark);
+}
+
+/* Header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    width: 100%;
+    min-width: 320px;
+    height: 90px;
+    color: white;
+}
+
+header a {
+    margin-left: 15px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: white;
+}
+
+header .header--light-container {
+    display: flex;
+    align-items: center;
+    font-size: 2.4rem;
+}
+
+header .header--light-container p {
+    margin-right: 15px;
+}
+
+header .header--light-container button {
+    border: none;
+    background-color: transparent;
+    color: white;
+}
+
+header .header--light-container button span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url('../img/icons/dom.png');
+    background-size: cover;
+}
+
+/* Fin de header */
+
+
+/* Search section */
+
+.search--input-container {
+    display: flex;
+    width: 90%;
+    min-width: 290px;
+    max-width: 600px;
+    height: 50px;
+    margin: 20px auto;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 14px;
+    background-color: var(--blue);
+}
+
+.search--input-container img {
+    width: 20px;
+    margin-left: 20px;
+}
+
+.search--input-container input {
+    height: 30px;
+    width: 70%;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: left;
+    font-size: 1rem;
+    background-color: var(--blue);
+    border: none;
+    color: white;
+}
+
+.search--input-container button {
+    margin-right: 20px;
+    height: 37px;
+    width: 100px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--sky-blue);
+    color: white;
+}
+
+.search--input-container button:hover {
+    cursor: pointer;
+}
+
+/* Fin de Search section */
+
+/* Information container */
+
+.information-container {
+    padding: 20px;
+    width: 90%;
+    height: auto;
+    min-width: 290px;
+    max-width: 600px;
+    margin: 10px auto;
+    border-radius: 14px;
+    background-color: var(--blue); 
+}
+
+.information-container--user{
+    display: flex;
+    align-items: center;
+}
+
+.information-container--user .information-container--user-image{
+    height: 70px;
+    width: 70px;
+    margin-right: 20px;
+    background-image: url('../img/users/WhatsApp\ Image\ 2022-01-13\ at\ 12.16.46\ AM.jpeg');
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.information-container--user .information-container--user-info {
+    color: white;
+}
+
+.information-container--user .information-container--user-info h1{
+    font-size: 2.4rem;
+    font-weight: bold;
+}
+
+.information-container--user .information-container--user-info h3{
+    font-size: 2rem;
+    color: var(--sky-blue);
+}
+
+.information-container--user .information-container--user-info h4{
+    font-size: 2rem;
+    font-weight: 100;
+}
+
+.information-container--bio {
+    margin: 20px 0;
+}
+
+
+.information-container--bio p{
+    font-size: 2.4rem;
+    line-height: 20px;
+    color: white;
+    font-weight: 100;
+}
+
+.information-container--repo-follow {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 80px;
+    background-color: var(--blue-dark);
+    border-radius: 10px;
+}
+
+.information-container--repo-follow div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.information-container--repo-follow div h4 {
+    font-size: 2rem;
+    color: white;
+}
+
+
+/* Fin information container */
+
+
+/* Social */
+
+.information-container--socials {
+    margin-top: 24px;
+}
+
+.information-container--socials .social-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.information-container--socials .social-container div {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+.information-container--socials .social-container div img{
+    width: 20px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.information-container--socials .social-container div h4{
+    font-size: 2.4rem;
+    color: white;
+    font-weight: 200;
+}
+
+.information-container--socials .social-container div a{
+    font-size: 2.4rem;
+    cursor: pointer;
+    color: white;
+    font-weight: 200;
+}
+
+/* Fin de Social */
